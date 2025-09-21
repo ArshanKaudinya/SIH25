@@ -21,7 +21,7 @@ export default function Test() {
   const cameraRef = useRef<CameraView>(null);
   const timerRef = useRef<number | null>(null);
 
-  // Timer effect for recording
+  // Timer effect for recordingtext strings must be rendered with a <Text> componenet
   useEffect(() => {
     if (isRecording && !isPaused) {
       timerRef.current = window.setInterval(() => {
@@ -545,13 +545,13 @@ export default function Test() {
                   <View className="flex-row items-center">
                     <View className={`w-3 h-3 rounded-full mr-3 ${permission?.granted ? 'bg-green-500' : 'bg-red-500'}`} />
                     <Text className="text-gray-300" style={{ fontFamily: 'Poppins_400Regular' }}>
-                      Camera: {permission?.granted ? 'Granted' : 'Required'}
+                      <Text>Camera: {permission?.granted ? 'Granted' : 'Required'}</Text>
                     </Text>
                   </View>
                   <View className="flex-row items-center">
                     <View className={`w-3 h-3 rounded-full mr-3 ${audioPermission ? 'bg-green-500' : 'bg-red-500'}`} />
                     <Text className="text-gray-300" style={{ fontFamily: 'Poppins_400Regular' }}>
-                      Microphone: {audioPermission ? 'Granted' : 'Required'}
+                      <Text>Microphone: {audioPermission ? 'Granted' : 'Required'}</Text>
                     </Text>
                   </View>
                 </View>
@@ -614,7 +614,7 @@ export default function Test() {
                         className="text-white font-bold"
                         style={{ fontFamily: 'Poppins_600SemiBold' }}
                       >
-                        REC {formatTime(recordingTime)}
+                        <Text>REC {formatTime(recordingTime)}</Text>
                       </Text>
                     </View>
                   )}
@@ -666,10 +666,12 @@ export default function Test() {
                   className="text-center text-gray-300 text-sm"
                   style={{ fontFamily: 'Poppins_400Regular' }}
                 >
-                  {!isRecording
-                    ? 'Tap the red button to start recording'
-                    : 'Recording in progress - tap red button to stop'
-                  }
+                  <Text>
+                    {!isRecording
+                      ? 'Tap the red button to start recording'
+                      : 'Recording in progress - tap red button to stop'
+                    }
+                  </Text>
                 </Text>
               </View>
             </View>
