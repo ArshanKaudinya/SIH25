@@ -1,23 +1,9 @@
 import { StyleSheet, View, Text } from 'react-native';
 
-export default function ProgressScreen() {
+export default function Progress() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Progress</Text>
+    <View className='h-screen bg-black p-20'>
+      <Text className='text-4xl text-white'>Progress</Text>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#fff',
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: '#333',
-  },
-});

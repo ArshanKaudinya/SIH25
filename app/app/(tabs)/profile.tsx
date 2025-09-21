@@ -1,23 +1,9 @@
 import { StyleSheet, View, Text } from 'react-native';
 
-export default function ProfileScreen() {
+export default function Profile() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Profile</Text>
+    <View className='h-screen bg-black p-20'>
+      <Text className='text-4xl text-white'>Profile</Text>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#fff',
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: '#333',
-  },
-});

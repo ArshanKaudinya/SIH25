@@ -1,23 +1,9 @@
 import { StyleSheet, View, Text } from 'react-native';
 
-export default function TestsScreen() {
+export default function Test() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Tests</Text>
+    <View className='h-screen bg-black p-20'>
+      <Text className='text-4xl text-white'>Tests</Text>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#fff',
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: '#333',
-  },
-});
