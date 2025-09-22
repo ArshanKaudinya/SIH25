@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from routes import auth, pushups
+from routes import router as api_router
 
 app = FastAPI(title="AiTHLETIQ API", version="0.1.0")
 
@@ -12,10 +12,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(auth.router, prefix="/auth", tags=["auth"])
-app.include_router(pushups.router, prefix="/pushups", tags=["pushups"])
-# app.include_router(uploads.router, prefix="/uploads", tags=["uploads"])
-# app.include_router(jobs.router, prefix="/jobs", tags=["jobs"])
+app.include_router(api_router)
 
 @app.get("/health")
 def health():

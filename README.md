@@ -1,3 +1,4 @@
+# AiTHLETIQ
 # Sports Talent Assessment Platform
 
 This is a hackathon project that tries to make sports talent assessment more accessible in India. The idea is simple: athletes can record short videos of standard fitness tests like pushups or jumps on their phone, and the system will analyze the performance using computer vision. Results are stored and verified so officials can track progress and spot potential talent.
