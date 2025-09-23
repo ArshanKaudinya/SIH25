@@ -1,0 +1,182 @@
+# -------------------------
+# OS / Editor junk
+# -------------------------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+*.swp
+*.swo
+*.tmp
+*.log
+*.bak
+*.orig
+*~
+*.lock
+
+# VSCode / JetBrains
+.vscode/
+.idea/
+*.iml
+
+# -------------------------
+# Python / FastAPI backend / ML worker
+# -------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.pkl
+*.egg
+*.egg-info/
+.eggs/
+dist/
+build/
+pip-wheel-metadata/
+*.manifest
+*.spec
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+python_env/
+.ipynb_checkpoints
+
+# PyTest / coverage
+.cache/
+.pytest_cache/
+.tox/
+.coverage
+coverage.xml
+htmlcov/
+
+# ML artifacts
+*.h5
+*.hdf5
+*.ckpt
+*.pth
+*.pt
+*.pb
+*.onnx
+*.tflite
+*.joblib
+*.pkl
+
+# Data files
+data/
+datasets/
+*.csv
+*.tsv
+*.jsonl
+*.parquet
+*.feather
+*.db
+*.sqlite
+*.zip
+*.gz
+*.tar
+*.tgz
+*.bz2
+*.xz
+*.npy
+*.npz
+
+# Experiment logs
+mlruns/
+wandb/
+tensorboard/
+tb_logs/
+checkpoints/
+lightning_logs/
+
+# -------------------------
+# Node.js / frontend / mobile app
+# -------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Next.js / React / Expo
+.next/
+.nuxt/
+out/
+build/
+dist/
+.vercel/
+.cache/
+.expo/
+.expo-shared/
+*.tsbuildinfo
+
+# Android
+android/.gradle/
+android/app/build/
+*.apk
+*.aar
+*.ap_
+*.dex
+*.class
+
+# iOS
+ios/Pods/
+ios/build/
+*.xcworkspace
+*.xcuserstate
+*.xcuserdata/
+*.xcodeproj/project.xcworkspace/
+DerivedData/
+
+# -------------------------
+# Env / secrets
+# -------------------------
+.env
+.env.*
+*.secret
+*.key
+*.pem
+*.crt
+
+# Supabase / Firebase / AWS / GCP creds
+.supabase/
+firebase-debug.log
+credentials.json
+aws_credentials
+gcloud-service-key.json
+
+# -------------------------
+# Docker / CI
+# -------------------------
+.docker/
+docker-compose.override.yml
+docker-compose.local.yml
+.dockerignore
+
+# -------------------------
+# Local dbs
+# -------------------------
+*.sqlite3
+pgdata/
+postgres_data/
+mongodb_data/
+
+# -------------------------
+# Other binaries
+# -------------------------
+*.exe
+*.dll
+*.so
+*.dylib
+*.bin
+*.o
+*.obj
+*.a
+*.lib
+*.class
