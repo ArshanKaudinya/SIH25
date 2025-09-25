@@ -58,7 +58,7 @@ const exerciseData: Record<string, ExerciseData> = {
       { day: 'Sun', value: 38 },
     ],
   },
-  squats: {
+  pushup: {
     avgTime: '4.1 min',
     avgScore: 85,
     bestScore: 93,
@@ -139,7 +139,7 @@ export default function Progress() {
     { key: 'pushups', label: '💪 Push-ups', emoji: '💪' },
     { key: 'situps', label: '🏋️ Sit-ups', emoji: '🏋️' },
     { key: 'highjump', label: '🏃 High Jump', emoji: '🏃' },
-    { key: 'squats', label: '🏋️ Squats', emoji: '🏋️' },
+    { key: 'pushup', label: '💪 Push-up', emoji: '💪' },
   ];
 
   return (
