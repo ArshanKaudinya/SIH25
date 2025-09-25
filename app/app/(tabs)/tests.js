@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, Dimensions, TouchableOpacity } from 'react-native';
 import WebView from 'react-native-webview';
-import { Camera, useCameraPermissions } from 'expo-camera';
+import { useCameraPermissions } from 'expo-camera';
 
 const API_KEY = process.env.API_KEY;
 const POSETRACKER_API = process.env.POSETRACKER_API;
@@ -19,6 +19,7 @@ export default function Test() {
     if (!permission?.granted) {
       requestPermission();
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -55,7 +56,6 @@ export default function Test() {
 
   const exercise = "pushup";
   const difficulty = "easy";
-  const skeleton = true;
 
   const posetracker_url = `${POSETRACKER_API}?token=${API_KEY}&exercise=${exercise}&difficulty=${difficulty}&width=${width}&height=${height}&keypoints=${true}`;
 

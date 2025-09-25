@@ -1,16 +1,29 @@
+# config.py
 import os
+import logging
 
-SUPABASE_JWKS_URL = os.getenv("SUPABASE_JWKS_URL", "").strip()
+try:
+    # optional: only if you use a .env file
+    from dotenv import load_dotenv  # pip install python-dotenv
+    load_dotenv()  # must happen before reading os.getenv
+except Exception:
+    pass
 
-SUPABASE_URL = os.getenv("SUPABASE_URL", "").strip()
-SUPABASE_SERVICE_ROLE_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY", "").strip()
+logger = logging.getLogger(__name__)
 
-JWT_AUDIENCE = os.getenv("JWT_AUDIENCE", "").strip()
+def _redact(s: str | None, keep: int = 6) -> str:
+    if not s:
+        return "<empty>"
+    return s[:keep] + "…" + f" (len={len(s)})"
 
-# STORAGE_KIND = os.getenv("STORAGE_KIND", "r2")  
+SUPABASE_JWKS_URL = (os.getenv("SUPABASE_JWKS_URL") or "").strip()
+SUPABASE_URL = (os.getenv("SUPABASE_URL") or "").strip()
+SUPABASE_SERVICE_ROLE_KEY = (os.getenv("SUPABASE_SERVICE_ROLE_KEY") or "").strip()
+JWT_AUDIENCE = (os.getenv("JWT_AUDIENCE") or "").strip()
 
-# R2_ACCOUNT_ID = os.getenv("R2_ACCOUNT_ID", "").strip()
-# R2_BUCKET = os.getenv("R2_BUCKET", "").strip()
-# R2_ACCESS_KEY = os.getenv("R2_ACCESS_KEY", "").strip()
-# R2_SECRET_KEY = os.getenv("R2_SECRET_KEY", "").strip()
-# PRESIGN_TTL = int(os.getenv("PRESIGN_TTL", "900")) 
+# One-time diagnostics (safe, redacted)
+logger.info(
+    "Config loaded: SUPABASE_URL=%s, SERVICE_ROLE_KEY=%s",
+    _redact(SUPABASE_URL),
+    _redact(SUPABASE_SERVICE_ROLE_KEY, keep=3),
+)
