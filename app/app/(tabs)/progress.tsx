@@ -249,13 +249,13 @@ export default function Progress() {
                 className="text-white text-lg font-bold"
                 style={{ fontFamily: 'Poppins_600SemiBold' }}
               >
-                🏆 This Week's Champion
+                🏆 This Week&apos;s Champion
               </Text>
               <Text
                 className="text-orange-100 text-sm mt-1"
                 style={{ fontFamily: 'Poppins_400Regular' }}
               >
-                You've improved by 15% this week!
+                You&apos;ve improved by 15% this week!
               </Text>
             </View>
           </View>

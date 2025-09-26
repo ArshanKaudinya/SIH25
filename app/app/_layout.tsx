@@ -52,7 +52,7 @@ function RootNavigator() {
         console.log('[router] route=setup (profile incomplete)');
       } else {
         setRoute('app');
-        console.log('[router] route=app (valid user)');
+        // console.log('[router] route=app (valid user)');
       }
       setReady(true);
     };

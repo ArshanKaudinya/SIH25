@@ -112,15 +112,6 @@ export default function ProfileSetup() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const onSnap = (opts: number[], setVal: (n: number) => void) =>
-    (e: NativeSyntheticEvent<NativeScrollEvent>) => {
-      const x = e.nativeEvent.contentOffset.x;
-      let idx = Math.round(x / ITEM_W);
-      if (idx < 0) idx = 0;
-      if (idx >= opts.length) idx = opts.length - 1;
-      setVal(opts[idx]);
-    };
-
   const saveProfile = async () => {
     try {
       if (!session?.user) throw new Error('Not logged in');
