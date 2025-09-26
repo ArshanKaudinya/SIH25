@@ -5,3 +5,4 @@ requests
 PyJWT
 supabase
 httpx
+openai
