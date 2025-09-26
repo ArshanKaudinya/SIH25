@@ -3,8 +3,8 @@ import { StyleSheet, Text, View, Dimensions, TouchableOpacity } from 'react-nati
 import WebView from 'react-native-webview';
 import { useCameraPermissions } from 'expo-camera';
 
-const API_KEY = process.env.API_KEY;
-const POSETRACKER_API = process.env.POSETRACKER_API;
+const API_KEY = process.env.EXPO_PUBLIC_API_KEY;
+const POSETRACKER_API = process.env.EXPO_PUBLIC_POSETRACKER_API;
 const { width, height } = Dimensions.get('window');
 
 export default function Test() {
@@ -19,8 +19,7 @@ export default function Test() {
     if (!permission?.granted) {
       requestPermission();
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  });
 
   useEffect(() => {
     let interval;

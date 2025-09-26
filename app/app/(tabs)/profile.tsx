@@ -255,11 +255,6 @@ export default function Profile() {
                       </Text>
                     </View>
                   </View>
-                  {athlete?.coach_id ? (
-                    <View className="bg-green-500 px-3 py-2 rounded-full">
-                      <Text className="text-white text-xs font-bold">{athlete.coach_id}</Text>
-                    </View>
-                  ) : null}
                 </View>
               )}
             </View>
