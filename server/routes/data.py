@@ -1,4 +1,3 @@
-# routes/athletes.py
 from fastapi import APIRouter, HTTPException
 from utils.supabase import sb
 import logging
